@@ -1,0 +1,5 @@
+requests
+xmltodict
+retry
+tldextract
+coloredlogs

@@ -1,0 +1,17 @@
+{
+    "resolver_infos": [{
+        "Resolver": "NamesiloResolver",
+        "domain": "a.your.doamin.com",
+        "resolve_type": "AAAA",
+        "key": "your Namesilo api key",
+        "ttl": 7000
+    },
+    {
+        "Resolver": "NamesiloResolver",
+        "domain": "b.your.doamin.com",
+        "resolve_type": "A",
+        "ttl": 7000,
+        "key": "your Namesilo api key"
+    }],
+    "wait_minute_pre_check": 30
+}
