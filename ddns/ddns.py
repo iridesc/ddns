@@ -13,13 +13,13 @@ RESOLVER_DICT = {
 
 def get_current_ip(ip_version: int = 4):
     try:
-        r = req(url=f"https://api{ip_version}.ipify.org/?format=json")
+        r = req(url=f"http://echov{ip_version}.irid.cc:8080")
     except Exception as error:
         logger.warning(f"get_current_ip error: make sure you can access {ip_version=} network! {error=}")
         return
-    ip = r.json()["ip"]
-    logger.info(f"get_current_ip: {ip_version=} {ip}")
-    return ip
+
+    logger.info(f"get_current_ip: {ip_version=} {r.text}")
+    return r.text
 
 
 def check_and_update(ip: str, resolve_type: str, resolve_infos: list):
